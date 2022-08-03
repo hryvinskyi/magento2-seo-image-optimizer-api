@@ -8,21 +8,15 @@ declare(strict_types=1);
 
 namespace Hryvinskyi\SeoImageOptimizerApi\Model\Convertor;
 
-use Hryvinskyi\ResponsiveImages\Module\PictureInterface;
-
 interface ConvertorInterface
 {
     /**
-     * @param string $sourceImageTag
+     * Run command
+     *
      * @param string $sourceImageUri
-     * @param PictureInterface $picture
-     * @param string|null $destinationImageUri
      * @return void
+     *
+     * @throws \Magento\Framework\Exception\FileSystemException
      */
-    public function execute(
-        string $sourceImageTag,
-        string $sourceImageUri,
-        PictureInterface $picture,
-        ?string $destinationImageUri = null
-    ): void;
+    public function execute(string $sourceImageUri): ?string;
 }
