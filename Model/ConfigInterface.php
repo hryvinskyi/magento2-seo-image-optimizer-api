@@ -34,4 +34,14 @@ interface ConfigInterface
      * @return bool
      */
     public function isEnabledJpg2(): bool;
+
+    /**
+     * @return array
+     */
+    public function getExcludeImageExpressionList(): array;
+
+    /**
+     * @return array
+     */
+    public function getExcludePictureExpressionList(): array;
 }
